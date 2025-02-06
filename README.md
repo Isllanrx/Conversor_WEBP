@@ -25,7 +25,7 @@ Este é um projeto simples e eficiente para converter imagens em formato WEBP di
 
 ## 📸 Capturas de Tela  
 
- ![Prévia do Conversor WEBP](imagem.png)
+ ![Prévia do Conversor WEBP]([imagem.png](https://raw.githubusercontent.com/Isllanrx/Conversor_WEBP/main/Imagem.png))
 
 ## 📌 Contribuição  
 
