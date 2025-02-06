@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor WEBP</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conversor de Imagens para WEBP</h1>
+
+      <button id="selecionar-imagens" class="btn">Selecionar Imagens</button>
+      <textarea id="lista-imagens" readonly class="textarea"></textarea>
+
+      <label for="qualidade">Qualidade da Conversão:</label>
+      <div class="range-container">
+        <input
+          type="range"
+          id="qualidade"
+          min="1"
+          max="100"
+          value="85"
+          class="range"
+        />
+        <span id="valor-qualidade" class="value">85%</span>
+      </div>
+
+      <div id="barra-progresso-container">
+        <progress
+          id="barra-progresso"
+          value="0"
+          max="100"
+          class="progress"
+        ></progress>
+      </div>
+
+      <div class="buttons">
+        <button id="botao-converter" class="btn">Converter Imagens</button>
+        <button id="limpar-lista" class="btn clear">Limpar Lista</button>
+      </div>
+
+      <a
+        href="https://www.linkedin.com/in/isllantoso/"
+        id="linkedin"
+        class="linkedin-link"
+        >Acesse meu LinkedIn</a
+      >
+
+      <footer>Desenvolvido pelo Isllan Toso</footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
