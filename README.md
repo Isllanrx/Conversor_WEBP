@@ -19,7 +19,7 @@ Este é um projeto simples e eficiente para converter imagens em formato WEBP di
 
 1. **Baixe ou clone** este repositório  
    ```bash
-   git clone https://github.com/seu-usuario/conversor-webp.git
+   git clone https://github.com/Isllanrx/Conversor_WEBP
    ```
 2. Abra o arquivo `index.html` no seu navegador  
 
