@@ -1,22 +1,30 @@
-# Conversor de Imagens para WEBP
+# WEBP Image Converter
 
-Aplicacao de alto desempenho para conversao de imagens para o formato WebP, operando inteiramente no lado do cliente (navegador). O projeto foi reestruturado de um script legado para uma arquitetura modular moderna utilizando TypeScript e Vite.
+High-performance client-side image conversion platform for transforming images into the WebP format directly in the browser. The project was modernized from a legacy script into a scalable modular architecture using TypeScript and Vite.
 
-## Arquitetura do Sistema
+---
 
-A aplicacao segue os principios de separacao de responsabilidades (SoC) e SOLID, dividida em camadas logicas:
+# Overview
+
+The application processes image conversions entirely on the client side, eliminating server-side dependencies while optimizing performance, memory usage and user experience.
+
+The architecture follows Separation of Concerns (SoC) and SOLID principles, ensuring maintainability, scalability and modularity.
+
+---
+
+# System Architecture
 
 ```mermaid
 graph TD
-    subgraph Camada_de_Interface [Interface do Usuario]
+    subgraph UI_Layer [User Interface]
         Events[events.ts] --> DOM[dom.ts]
     end
 
-    subgraph Camada_de_Processamento [Nucleo de Conversao]
+    subgraph Core_Layer [Conversion Engine]
         Converter[converter.ts]
     end
 
-    subgraph Camada_de_Servicos [Servicos de Suporte]
+    subgraph Services_Layer [Support Services]
         ZipService[zip-service.ts]
     end
 
@@ -25,54 +33,141 @@ graph TD
     Converter --> DOM
 ```
 
-### Componentes Principais
+---
 
-- **Interface do Usuario (UI)**: Gerencia o estado da interface, eventos de interacao e atualizacoes de progresso em tempo real.
-- **Nucleo de Conversao (Core)**: Contem a logica de processamento de imagem utilizando a API de Canvas do navegador para transformacao em WebP.
-- **Servicos de Suporte (Services)**: Gerencia a compactacao de arquivos utilizando a biblioteca JSZip e o fluxo de geracao do download.
+# Architecture Components
 
-## Funcionalidades
+## UI Layer
 
-- Conversao em lote de ate 50 imagens simultaneas.
-- Controle dinamico de qualidade de compressao (1-100%).
-- Gerenciamento eficiente de memoria com revogacao de Object URLs (preencao de memory leaks).
-- Interface responsiva e otimizada para diferentes resolucoes.
-- Download unico em formato ZIP compactado.
+Responsible for:
 
-## Requisitos de Desenvolvimento
+- Interface state management
+- User interaction handling
+- Progress updates
+- Responsive rendering workflows
 
-- Node.js (v18 ou superior)
-- NPM ou Yarn
+## Conversion Core
 
-## Instrucoes de Uso
+Handles:
 
-1. **Instalacao de Dependencias**:
-   ```bash
-   npm install
-   ```
+- Image processing pipelines
+- Browser Canvas API operations
+- WebP transformation logic
+- Compression quality management
 
-2. **Ambiente de Desenvolvimento**:
-   ```bash
-   npm run dev
-   ```
+## Services Layer
 
-3. **Geracao do Build de Producao**:
-   ```bash
-   npm run build
-   ```
+Responsible for:
 
-4. **Verificacao de Qualidade (Linting)**:
-   ```bash
-   npm run lint
-   ```
+- ZIP generation workflows
+- File aggregation
+- Download orchestration
+- Resource management utilities
 
-## Deploy
+---
 
-Esta aplicacao esta otimizada para deploy na **Vercel**. Ao conectar o repositorio, a plataforma detectara automaticamente a configuracao do Vite.
+# Features
 
-- **Comando de Build**: `npm run build`
-- **Diretorio de Saida**: `dist`
+- Batch conversion of up to 50 images simultaneously
+- Dynamic compression quality control (1%–100%)
+- Optimized browser memory management with Object URL revocation
+- Responsive interface for multiple screen resolutions
+- Compressed ZIP export workflow
+- Fully client-side processing architecture
+- Lightweight and optimized runtime execution
 
-## Licenca
+---
 
-Este projeto esta sob a licenca MIT.
+# Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | TypeScript |
+| Build Tool | Vite |
+| Compression | JSZip |
+| Image Processing | Browser Canvas API |
+
+---
+
+# Performance Considerations
+
+The application was designed with a performance-oriented architecture, including:
+
+- Client-side processing to reduce server overhead
+- Efficient memory cleanup to prevent memory leaks
+- Lightweight conversion workflows
+- Optimized batch processing pipeline
+- Minimal runtime dependencies
+
+---
+
+# Development Requirements
+
+- Node.js v18+
+- npm or Yarn
+
+---
+
+# Installation
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+# Development Environment
+
+```bash
+npm run dev
+```
+
+---
+
+# Production Build
+
+```bash
+npm run build
+```
+
+---
+
+# Code Quality
+
+## Run linting
+
+```bash
+npm run lint
+```
+
+---
+
+# Deployment
+
+The application is optimized for deployment on Vercel.
+
+Vite configuration is automatically detected during deployment.
+
+| Setting | Value |
+|---|---|
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+
+---
+
+# Engineering Principles
+
+- Separation of Concerns (SoC)
+- SOLID Principles
+- Modular Architecture
+- Performance-Oriented Design
+- Client-Side Processing
+- Maintainable Code Structure
+
+---
+
+# License
+
+This project is licensed under the MIT License.
