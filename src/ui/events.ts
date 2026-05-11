@@ -19,7 +19,7 @@ export const initEvents = () => {
       if (target.files) {
         const files = Array.from(target.files);
         if (files.length > 50) {
-          showAlert('Voce pode selecionar no maximo 50 imagens.');
+          showAlert('Você pode selecionar no máximo 50 imagens.', 'error');
           return;
         }
         selectedFiles = files;
@@ -37,7 +37,7 @@ export const initEvents = () => {
 
   elements.btnConvert.addEventListener('click', async () => {
     if (selectedFiles.length === 0) {
-      showAlert('Nenhuma imagem selecionada!');
+      showAlert('Nenhuma imagem selecionada!', 'info');
       return;
     }
 
@@ -65,10 +65,10 @@ export const initEvents = () => {
       const zipBlob = await zipService.generateZip();
       zipService.downloadZip(zipBlob);
 
-      showAlert('Conversao concluida!');
+      showAlert('Conversão concluída!', 'success');
     } catch (error) {
-      console.error('Erro na conversao:', error);
-      showAlert('Ocorreu um erro durante a conversao.');
+      console.error('Erro na conversão:', error);
+      showAlert('Ocorreu um erro durante a conversão.', 'error');
     } finally {
       setButtonState(true);
       updateProgress(0, 100);

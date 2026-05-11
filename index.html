@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversor WEBP - Modern</title>
+    <title>Conversor WEBP - Premium</title>
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
   </head>
   <body>
-    <div class="container">
-      <h1>Conversor de Imagens para WEBP</h1>
+    <div id="toast-container"></div>
+    <div class="background-circles">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+    </div>
+    <main class="container">
+      <header>
+        <h1>Conversor WEBP <span class="badge">PRO</span></h1>
+        <p class="subtitle">Otimize suas imagens com facilidade</p>
+      </header>
 
       <button id="selecionar-imagens" class="btn">Selecionar Imagens</button>
       <textarea id="lista-imagens" readonly class="textarea"></textarea>
@@ -47,7 +56,7 @@
       >
 
       <footer>Desenvolvido pelo Isllan Toso</footer>
-    </div>
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

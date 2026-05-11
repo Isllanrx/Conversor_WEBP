@@ -17,6 +17,27 @@ export const setButtonState = (enabled: boolean) => {
   elements.btnConvert.disabled = !enabled;
 };
 
-export const showAlert = (message: string) => {
-  alert(message);
+export const showAlert = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  
+  const icon = document.createElement('span');
+  icon.innerHTML = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+  
+  const text = document.createElement('span');
+  text.textContent = message;
+
+  toast.appendChild(icon);
+  toast.appendChild(text);
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('hide');
+    setTimeout(() => {
+      container.removeChild(toast);
+    }, 300);
+  }, 4000);
 };
