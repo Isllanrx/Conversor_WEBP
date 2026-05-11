@@ -1,0 +1,37 @@
+{
+  "name": "conversor_webp",
+  "version": "1.0.0",
+  "description": "Este é um projeto simples e eficiente para converter imagens em formato WEBP diretamente pelo navegador. Ele permite a seleção de múltiplas imagens, ajuste da qualidade da conversão e o download das imagens convertidas em um arquivo ZIP.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.{ts,css,html}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isllanrx/Conversor_WEBP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isllanrx/Conversor_WEBP/issues"
+  },
+  "homepage": "https://github.com/Isllanrx/Conversor_WEBP#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jszip": "^3.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "jszip": "^3.10.1",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.11"
+  }
+}
