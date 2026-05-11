@@ -121,7 +121,7 @@ const App: React.FC = () => {
       <main className="container">
         <header>
           <h1>Conversor WEBP <span className="badge">PRO</span></h1>
-          <p className="subtitle">Otimize suas imagens com performance React</p>
+          <p className="subtitle">Otimize suas imagens com performance</p>
         </header>
 
         <label htmlFor="file-upload" className="dropzone">
@@ -214,7 +214,7 @@ const App: React.FC = () => {
           <LinkIcon size={16} /> Conecte-se no LinkedIn
         </a>
 
-        <footer>Desenvolvido com React por Isllan Toso</footer>
+        <footer>Desenvolvido por Isllan Toso</footer>
       </main>
     </div>
   );
