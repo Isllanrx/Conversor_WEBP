@@ -3,61 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversor WEBP - Premium</title>
+    
+    <!-- SEO Primary Tags -->
+    <title>Conversor WEBP Online - Rápido, Grátis e Premium</title>
+    <meta name="title" content="Conversor WEBP Online - Rápido, Grátis e Premium" />
+    <meta name="description" content="Converta suas imagens para WEBP instantaneamente com nossa ferramenta premium. Otimize o SEO do seu site com imagens leves e de alta qualidade. Grátis e fácil de usar." />
+    <meta name="keywords" content="conversor webp, converter imagem para webp, otimizar imagens, seo imagens, webp converter online, conversor de imagem gratis" />
+    <meta name="author" content="Isllan Toso" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://conversor-webp-premium.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://conversor-webp-premium.vercel.app/" />
+    <meta property="og:title" content="Conversor WEBP Online - Premium & Rápido" />
+    <meta property="og:description" content="Otimize suas imagens para a web em segundos. Ferramenta gratuita de conversão WEBP com ajuste de qualidade." />
+    <meta property="og:image" content="/src/assets/favicon.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://conversor-webp-premium.vercel.app/" />
+    <meta property="twitter:title" content="Conversor WEBP Online - Premium & Rápido" />
+    <meta property="twitter:description" content="Otimize suas imagens para a web em segundos. Ferramenta gratuita de conversão WEBP com ajuste de qualidade." />
+    <meta property="twitter:image" content="/src/assets/favicon.svg" />
+
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
   </head>
   <body>
-    <div id="toast-container"></div>
-    <div class="background-circles">
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-    </div>
-    <main class="container">
-      <header>
-        <h1>Conversor WEBP <span class="badge">PRO</span></h1>
-        <p class="subtitle">Otimize suas imagens com facilidade</p>
-      </header>
-
-      <button id="selecionar-imagens" class="btn">Selecionar Imagens</button>
-      <textarea id="lista-imagens" readonly class="textarea"></textarea>
-
-      <label for="qualidade">Qualidade da Conversão:</label>
-      <div class="range-container">
-        <input
-          type="range"
-          id="qualidade"
-          min="1"
-          max="100"
-          value="85"
-          class="range"
-        />
-        <span id="valor-qualidade" class="value">85%</span>
-      </div>
-
-      <div id="barra-progresso-container">
-        <progress
-          id="barra-progresso"
-          value="0"
-          max="100"
-          class="progress"
-        ></progress>
-      </div>
-
-      <div class="buttons">
-        <button id="botao-converter" class="btn">Converter Imagens</button>
-        <button id="limpar-lista" class="btn clear">Limpar Lista</button>
-      </div>
-
-      <a
-        href="https://www.linkedin.com/in/isllantoso/"
-        id="linkedin"
-        class="linkedin-link"
-        >Acesse meu LinkedIn</a
-      >
-
-      <footer>Desenvolvido pelo Isllan Toso</footer>
-    </main>
-
-    <script type="module" src="/src/main.ts"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

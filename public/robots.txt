@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://conversor-webp-premium.vercel.app/sitemap.xml
