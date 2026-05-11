@@ -11,6 +11,19 @@ export const elements = {
 export const updateProgress = (completed: number, total: number) => {
   const percentage = total > 0 ? (completed / total) * 100 : 0;
   elements.progressBar.value = percentage;
+  
+  const container = document.getElementById('barra-progresso-container');
+  if (container) {
+    if (percentage > 0 && percentage < 100) {
+      container.classList.add('active');
+    } else {
+      setTimeout(() => {
+        if (elements.progressBar.value === 0 || elements.progressBar.value === 100) {
+          container.classList.remove('active');
+        }
+      }, 1000);
+    }
+  }
 };
 
 export const setButtonState = (enabled: boolean) => {
